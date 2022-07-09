@@ -1,0 +1,11 @@
+.vscode/system-objecttype-extensions.d.ts
+node_modules/
+npm-debug.log
+*.zip
+.idea/
+.DS_Store
+**/.metadata
+/dist
+dist/
+.vscode/forms.d.ts
+dist/
