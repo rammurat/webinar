@@ -9,6 +9,17 @@ module.exports = {
         rules: [{
             test: /\.html$/i,
             loader: "html-loader",
+        },
+        {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    outputPath: 'public',
+                  },
+                },
+            ],
         }, ],
     },
     mode: 'development',
