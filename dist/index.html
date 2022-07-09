@@ -1,9 +1,310 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Development</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script></head>
-  <body>
-  </body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-TileColor" content="#0ed3cf">
+        <meta name="theme-color" content="#0ed3cf">
+        <meta property="og:image" content="http://tailwindcomponents.com/storage/7022/conversions/temp27414-ogimage.jpg?v=2022-07-09 08:25:16" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content="https://tailwindcomponents.com/component/compact-sidebar/landing" />
+        <meta property="og:title" content="Compact sidebar by Tailus UI" />
+        <meta property="og:description" content="A dashboard compact sidebar with tailwindcss only" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TwComponents" />
+        <meta name="twitter:title" content="Compact sidebar by Tailus UI" />
+        <meta name="twitter:description" content="A dashboard compact sidebar with tailwindcss only" />
+        <meta name="twitter:image" content="http://tailwindcomponents.com/storage/7022/conversions/temp27414-ogimage.jpg?v=2022-07-09 08:25:16" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="Rick & Morty PWA" />
+        <meta name="description" content="PWA with Workbox" />
+        <meta name="theme-color" content="#004d40" />
+
+        <link rel="manifest" href="/b50bf253bca01ca6d565.json" />
+        <!-- <link rel="apple-touch-icon" href="/assets/img/icons/rick-morty-pwa-icon-512x512.png" />   -->
+
+        <link href="/ef0bafb9c060656fac8a.css" rel="stylesheet">
+        <title>PWA Demo</title>
+
+        <script src="/a17ce5377d13f8aac9a8.js"></script>
+
+        <!-- <link rel="manifest" href="" crossorigin="use-credentials" />
+        <meta name="theme-color" content="#fff" />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <iscomment>Configuring Web Applications for Apple</iscomment>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Demo app" />
+        <iscomment>To specify multiple icons for different device resolutions for Apple</iscomment>
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-57x57.png" sizes="57x57" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-60x60.png" sizes="60x60" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-72x72.png" sizes="72x72" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-76x76.png" sizes="76x76" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-114x114.png" sizes="114x114" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-120x120.png" sizes="120x120" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-144x144.png" sizes="144x144" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-152x152.png" sizes="152x152" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-167x167.png" sizes="167x167" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-180x180.png" sizes="180x180" />
+        <iscomment>Specifying Launch Screen Images for Apple</iscomment>
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1242x2688.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-828x1792.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1125x2436.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1242x2208.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-750x1624.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-2048x2732.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1668x2388.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1668x2224.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1536x2048.png" /> -->
+    <script defer src="/runtime.js"></script><script defer src="/index.js"></script></head>
+    <body class="h-screen  flex items-center justify-center" style="background: #edf2f7;">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <div class="min-h-screen" style="z-index: 1;">
+            <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+                <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                    <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                        <div class="flex flex-row items-center justify-between p-4">
+                            <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Demo App</a>
+                            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>   
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>   
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white" style="position: absolute; top: 70px;">
+            <div class="mx-auto py-0 px-10 lg:max-w-7xl lg:px-8" style="padding-top: 20px">
+                <nav class="rounded-md w-full">
+                    <ol class="list-reset flex">
+                        <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
+                        <li><span class="text-gray-500 mx-2">/</span></li>
+                        <li class="text-gray-500">Women</li>
+                        <li><span class="text-gray-500 mx-2">/</span></li>
+                        <li class="text-gray-500">All womenwear</li>
+                    </ol>
+                </nav>
+                <h1 class="text-center text-4xl p-5">All womenswear</h1>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <!-- ====== Services Section Start -->
+                <section class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
+                    <div class="container">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-full px-4">
+                                <div class="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
+                                    <span class="font-semibold text-lg text-primary mb-2 block">
+                                    Our Services
+                                    </span>
+                                    <h2
+                                        class="
+                                        font-bold
+                                        text-3xl
+                                        sm:text-4xl
+                                        md:text-[40px]
+                                        text-dark
+                                        mb-4
+                                        "
+                                        >
+                                        What We Offer
+                                    </h2>
+                                    <p class="text-base text-body-color">
+                                        There are many variations of passages of Lorem Ipsum available
+                                        but the majority have suffered alteration in some form.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/26ce70a18e2fc1f9eceb.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        Refreshing Design
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/8e7ccfc3c0ebd095820f.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        Based on Tailwind CSS
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/26ce70a18e2fc1f9eceb.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        300+ Components
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/8e7ccfc3c0ebd095820f.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        Speed Optimized
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/26ce70a18e2fc1f9eceb.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        Fully Customizable
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div
+                                    class="
+                                    p-10
+                                    md:px-7
+                                    xl:px-10
+                                    rounded-[20px]
+                                    bg-white
+                                    shadow-md
+                                    hover:shadow-lg
+                                    mb-8
+                                    "
+                                    >
+                                    <img src="/8e7ccfc3c0ebd095820f.webp" />
+                                    <h4 class="font-semibold text-xl text-dark mb-3">
+                                        Regular Updates
+                                    </h4>
+                                    <p class="text-body-color">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="fixed bottom-0 left-0 right-0 z-40 px-4 py-3 text-center text-white bg-gray-800">
+            This a footer component. 
+        </div>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./sw.js').then(
+                    registration => {
+                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                    },
+                    error => {
+                        console.error(`Service Worker registration failed: ${error}`);
+                    },
+                    );
+                });
+            }
+        </script>
+    </body>
 </html>

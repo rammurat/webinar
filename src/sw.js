@@ -13,7 +13,6 @@ import {
 const MAX_ENTRIES = 200;
 const MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 Days
 const PAGE_MAX_AGE_SECONDS = 60 * 15; // 15 Mins
-// const appShell = self.appShell;
 
 setCacheNameDetails({
   prefix: '',
@@ -24,7 +23,20 @@ setCacheNameDetails({
 self.skipWaiting();
 clientsClaim();
 
-// precacheAndRoute(appShell.concat(self.__WB_MANIFEST));
+precacheAndRoute([
+  {
+      'url': "index.js",
+      'revision': null
+  },
+  {
+    'url': "sw.js",
+    'revision': null
+  },
+  {
+    'url': "runtime.js",
+    'revision': null
+  }
+]);
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 registerRoute(
