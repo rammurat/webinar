@@ -23,10 +23,10 @@ setCacheNameDetails({
 self.skipWaiting();
 clientsClaim();
 
-precacheAndRoute([
+self.appShell = [
   {
-      'url': "index.js",
-      'revision': null
+    'url': "index.js",
+    'revision': null
   },
   {
     'url': "sw.js",
@@ -36,7 +36,10 @@ precacheAndRoute([
     'url': "runtime.js",
     'revision': null
   }
-]);
+];
+
+const appShell = self.appShell;
+precacheAndRoute(appShell.concat(self.__WB_MANIFEST));
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 registerRoute(
