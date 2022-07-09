@@ -30,6 +30,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "workbox-webpack-plugin": "^6.5.3"
   }
 }

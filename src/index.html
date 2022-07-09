@@ -28,10 +28,57 @@
         <link rel="manifest" href="./manifest.json" />
         <!-- <link rel="apple-touch-icon" href="/assets/img/icons/rick-morty-pwa-icon-512x512.png" />   -->
 
-        <link href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="./tailwind.min.css" rel="stylesheet">
         <title>PWA Demo</title>
 
-        <script src="https://unpkg.com/lodash@4.17.20"></script>
+        <script src="./lodash.js"></script>
+
+        <!-- <link rel="manifest" href="" crossorigin="use-credentials" />
+        <meta name="theme-color" content="#fff" />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <iscomment>Configuring Web Applications for Apple</iscomment>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Demo app" />
+        <iscomment>To specify multiple icons for different device resolutions for Apple</iscomment>
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-57x57.png" sizes="57x57" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-60x60.png" sizes="60x60" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-72x72.png" sizes="72x72" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-76x76.png" sizes="76x76" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-114x114.png" sizes="114x114" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-120x120.png" sizes="120x120" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-144x144.png" sizes="144x144" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-152x152.png" sizes="152x152" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-167x167.png" sizes="167x167" />
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-180x180.png" sizes="180x180" />
+        <iscomment>Specifying Launch Screen Images for Apple</iscomment>
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1242x2688.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-828x1792.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1125x2436.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+            href="images/icons/apple-launch-icon-1242x2208.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-750x1624.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-2048x2732.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1668x2388.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1668x2224.png" />
+        <link rel="apple-touch-startup-image"
+            media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+            href="images/icons/apple-launch-icon-1536x2048.png" /> -->
     </head>
     <body class="h-screen  flex items-center justify-center" style="background: #edf2f7;">
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -246,18 +293,27 @@
         </div>
 
         <script>
-          if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-              navigator.serviceWorker.register('sw.js').then(
-                registration => {
-                  console.log(`Service Worker registered! Scope: ${registration.scope}`);
-                },
-                error => {
-                  console.error(`Service Worker registration failed: ${error}`);
-                },
-              );
-            });
-          }
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./sw.js').then(
+                    registration => {
+                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                    },
+                    error => {
+                        console.error(`Service Worker registration failed: ${error}`);
+                    },
+                    );
+                });
+            }
+
+            self.appShell = [
+                {
+                    'url': "tailwind.min.css",
+                    'revision': "1111"
+                }
+            ];
+            self.offlinePage = "offline.html";
+            self.importScripts('./dist/sw.js');
         </script>
     </body>
 </html>

@@ -1,38 +1,44 @@
-
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const swSrcPath = './src/sw.js';
+const swDestPath = './dist/sw.js';
 
- module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
+module.exports = {
+    module: {
+        rules: [{
+            test: /\.html$/i,
+            loader: "html-loader",
+        }, ],
+    },
+    mode: 'development',
+    entry: {
+        index: './src/index.js',
+    },
+    devServer: {
+        static: './dist',
+    },
+    devtool: 'inline-source-map',
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Output Management',
+            title: 'Development',
+        }),
+        new WorkboxWebpackPlugin.InjectManifest({
+            swSrc: path.resolve(__dirname, swSrcPath),
+            swDest: path.resolve(__dirname, swDestPath),
+            exclude: [/./],
+            compileSrc: true,
+            maximumFileSizeToCacheInBytes: 5242880,
+        }),
     ],
-  },
-  mode: 'development',
-   entry: {
-     index: './src/index.js',
-   },
-   devServer: {
-    static: './dist',
-  },
-  devtool: 'inline-source-map',
-   plugins: [
-     new HtmlWebpackPlugin({
-      title: 'Output Management',
-      title: 'Development',
-     }),
-   ],
-   output: {
-    filename: '[name].bundle.js',
-     path: path.resolve(__dirname, 'dist'),
-     clean: true,
-     publicPath: '/',
-   },
-   optimization: {
-    runtimeChunk: 'single',
-   },
- };
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+        publicPath: '/',
+    },
+    optimization: {
+        runtimeChunk: 'single',
+    },
+};

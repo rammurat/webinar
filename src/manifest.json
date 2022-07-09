@@ -1,23 +1,26 @@
 {
-  "name": "Google Maps",
-  "short_name": "Maps",
-  "description": "Find your location with Google",
-  "icons": [
-    {
-      "src": "/images/icons-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/images/icons-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/?launch=pwa",
-  "background_color": "#3367D6",
+  "name": "DemoApp",
+  "short_name": "DemoApp",
+  "start_url": ".",
+  "scope": ".",
   "display": "standalone",
-  "orientation": "landscape",
-  "scope": "/maps/",
-  "theme_color": "#3367D6"
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "description": "PWA demo",
+  "orientation": "portrait",
+  "icons": [{
+      "src": "images/icons/manifest-icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+  }, {
+      "src": "images/icons/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+  }],
+  "related_applications": [{
+      "platform": "webapp",
+      "url": "http://localhost:3000/"
+  }]
 }
