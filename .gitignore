@@ -8,4 +8,3 @@ npm-debug.log
 /dist
 dist/
 .vscode/forms.d.ts
-dist/
