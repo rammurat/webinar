@@ -21,8 +21,9 @@ module.exports = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management',
-            title: 'Development',
+            title: 'PWA Demo',
+            filename: 'index.html',
+            template: './src/index.html'
         }),
         new WorkboxWebpackPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, swSrcPath),
@@ -34,7 +35,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         clean: true,
         publicPath: '/',
     },
