@@ -1,13 +1,28 @@
-import _ from 'lodash';
-import html from "./web-vitals.html";
 
-function component() {
-  const element = document.createElement('div');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = html;
-
-  return element;
+function owlCarosuelInit(){
+  $('.owl-carousel').length &&  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    lazyLoad:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:1,
+            nav:true,
+            loop:false
+        }
+    }
+})
 }
-
-document.body.appendChild(component());
+owlCarosuelInit();
+  
+  
