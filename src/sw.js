@@ -13,7 +13,7 @@ import {
 const MAX_ENTRIES = 200;
 const MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 Days
 const PAGE_MAX_AGE_SECONDS = 60 * 15; // 15 Mins
-const appShell = self.appShell;
+// const appShell = self.appShell;
 
 setCacheNameDetails({
   prefix: '',
@@ -24,7 +24,7 @@ setCacheNameDetails({
 self.skipWaiting();
 clientsClaim();
 
-precacheAndRoute(appShell.concat(self.__WB_MANIFEST));
+// precacheAndRoute(appShell.concat(self.__WB_MANIFEST));
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 registerRoute(
@@ -43,24 +43,6 @@ registerRoute(
     plugins: [
       new CacheableResponsePlugin({
         statuses: [200],
-      }),
-    ],
-  })
-);
-
-registerRoute(
-  function ({ url, request }) {
-    return request.destination === 'image';
-  },
-  new CacheFirst({
-    cacheName: 'pwa_thirdPartyImages',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: MAX_ENTRIES,
-        maxAgeSeconds: MAX_AGE_SECONDS,
       }),
     ],
   })
