@@ -30,6 +30,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
+        webvitals: './src/index.js',
     },
     devServer: {
         static: './dist',
@@ -40,6 +41,11 @@ module.exports = {
             title: 'PWA Demo',
             filename: 'index.html',
             template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About Web Vitals',
+            filename: 'webvitals.html',
+            template: './src/webvitals.html'
         }),
         new WorkboxWebpackPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, swSrcPath),
