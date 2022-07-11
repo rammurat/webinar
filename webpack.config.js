@@ -31,6 +31,7 @@ module.exports = {
     entry: {
         index: './src/index.js',
         webvitals: './src/index.js',
+        impactfulfeatures: './src/index.js',
     },
     devServer: {
         static: './dist',
@@ -43,9 +44,14 @@ module.exports = {
             template: './src/index.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'About Web Vitals',
-            filename: 'webvitals.html',
-            template: './src/webvitals.html'
+            title: 'Web Vitals Demo',
+            filename: 'web-vitals.html',
+            template: './src/web-vitals.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Impactful Features Demo',
+            filename: 'impactful-features.html',
+            template: './src/impactful-features.html'
         }),
         new WorkboxWebpackPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, swSrcPath),
