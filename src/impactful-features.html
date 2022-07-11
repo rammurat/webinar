@@ -1,2 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS and CSS preload example</title>
 
-<h1> Impactful demo</h1>
+    
+    <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+
+    <link rel="preload" href="critical.css" as="style">
+    
+
+    <link rel="preload"  href="jquery.js" as="script" >
+    <link rel="preload" href="index.js" as="script" >
+  
+   
+
+    <link rel="stylesheet" href="critical.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="cdnjs.cloudflare.com" rel="preconnect" crossorigin>
+    <script src="async.js" async ></script>
+  <script src="defer.js" defer></script>
+  <script src="default.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+    <h1>What is Lorem Ipsum?</h1>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer t
+        ook a galley of type and scrambled it to make a type specimen book.</p>
+
+    <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+
+    <h2>Why do we use it?</h2>
+
+    
+
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
+
+    <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of </p>
+
+    <video controls>
+        <source src="assets/sintel-short.mp4" type="video/mp4">
+        <source src="assets/sintel-short.webm" type="video/webm">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="assets/sintel-short.mp4">link to the video</a> instead.</p>
+      </video>
+    </div>
+      <script src="jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+
+      
+      <script>
+        console.log('sdsad', document.querySelector('h1'))
+      </script>
+  </body>
+</html>
