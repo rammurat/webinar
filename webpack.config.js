@@ -36,6 +36,9 @@ module.exports = {
     devServer: {
         static: './dist',
     },
+    stats: {
+        children: true
+    },
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
