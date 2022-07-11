@@ -32,6 +32,7 @@ module.exports = {
         index: './src/index.js',
         webvitals: './src/index.js',
         impactfulfeatures: './src/index.js',
+        crp: './src/index.js',
     },
     devServer: {
         static: './dist',
@@ -55,6 +56,11 @@ module.exports = {
             title: 'Impactful Features Demo',
             filename: 'impactful-features.html',
             template: './src/impactful-features.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Critical Rendering Demo',
+            filename: 'crp.html',
+            template: './src/crp.html'
         }),
         new WorkboxWebpackPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, swSrcPath),
