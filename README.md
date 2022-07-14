@@ -15,4 +15,4 @@ https://www.webpagetest.org/result/220710_AiDc3B_1SP/
 **Speedcurve example**
 https://app.speedcurve.com/spiffy-sorbet-0950c9/changes/
 
-_Kindly request for Speedcurve dashboard access offline
+_Kindly request for Speedcurve dashboard access offline_
